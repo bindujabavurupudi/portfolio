@@ -25,7 +25,7 @@ const AboutSection = () => (
           {/* Photo placeholder */}
           <div className="shrink-0 w-52 h-52 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-primary shadow-lg">
   <img
-    src="public/photo.jpeg"
+    src="/portfolio/photo.jpeg"
     alt="Binduja Bavurupudi"
     className="w-full h-full object-cover"
   />
