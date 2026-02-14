@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 const educationData = [
   {
     label: "2023 - present",
-    degree: "Bachelor of Technology in CSE(AL & ML)",
+    degree: "Bachelor of Technology in CSE(AI & ML)",
     institution: "Gayatri Vidya Parishad College Of Engineering",
     place: "Visakhapatnam, Andhra Pradesh",
     cgpa: "9.44",
