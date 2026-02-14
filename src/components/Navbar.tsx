@@ -52,14 +52,15 @@ const Navbar = () => {
 
         {/* Resume button */}
         <a
-          href="/portfolio/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsla(186,100%,50%,0.4)] transition-all duration-300 hover:scale-105"
-        >
-          <Download size={16} />
-          Resume
-        </a>
+  href="/portfolio/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsla(186,100%,50%,0.4)] transition-all duration-300 hover:scale-105"
+>
+  <Download size={16} />
+  Resume
+</a>
+
 
         {/* Mobile: hamburger only */}
         <div className="md:hidden flex items-center justify-between w-full">
