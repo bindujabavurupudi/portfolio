@@ -3,9 +3,11 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    desc: "A futuristic glassmorphism personal portfolio with animated backgrounds and smooth scrolling.",
-    stack: ["React", "TypeScript", "Tailwind"],
+    title: "FundForge",
+    desc: "Full Stack crowdfunding platform that allows users to create projects, set funding goals, and receive contributions from backers through a secure and user-friendly interface.",
+    demoUrl: "https://fastidious-peony-9e1bc0.netlify.app/",
+    sourceUrl: "https://github.com/bindujabavurupudi/FundForge-frontend",
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "ShadCN", "Node.js", "Express.js", "Supabase", "Firebase Auth"],
   },
   {
     title: "E-Commerce Platform",
@@ -82,7 +84,7 @@ const ProjectsSection = () => (
 
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href={"demoUrl" in project ? project.demoUrl : "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
@@ -90,7 +92,7 @@ const ProjectsSection = () => (
                   <ExternalLink size={14} /> Live Demo
                 </a>
                 <a
-                  href="#"
+                  href={"sourceUrl" in project ? project.sourceUrl : "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
