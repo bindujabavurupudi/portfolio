@@ -1,28 +1,34 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-const projects = [
+type Project = {
+  title: string;
+  desc: string;
+  stack: string[];
+  demoUrl?: string;
+  sourceUrl?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "Online Code Editor",
+    desc: "Built an interactive online code editor using HTML, CSS, and JavaScript that lets users write and preview HTML, CSS, and JS code in real time with live output rendering and dynamic styling support.",
+    demoUrl: "https://bindujabavurupudi.github.io/online-code-editor/",
+    sourceUrl: "https://github.com/bindujabavurupudi/online-code-editor",
+    stack: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "Visa Approval Classifier",
+    desc: "Built and deployed an XGBoost-based visa approval prediction system using Flask, Docker, and AWS, achieving 73% accuracy. Integrated a responsive frontend using HTML, CSS, and JavaScript for user interaction.",
+    sourceUrl: "https://github.com/bindujabavurupudi/visa-approval-prediction",
+    stack: ["HTML", "CSS", "JavaScript", "Flask", "Docker", "AWS", "XGBoost"],
+  },
   {
     title: "FundForge",
-    desc: "Full Stack crowdfunding platform that allows users to create projects, set funding goals, and receive contributions from backers through a secure and user-friendly interface.",
+    desc: "Developed a full-stack crowdfunding platform that allows users to create projects, set funding goals, and receive contributions from backers through a secure and user-friendly interface. Implemented secure user authentication, project management, and real-time funding progress tracking.",
     demoUrl: "https://fastidious-peony-9e1bc0.netlify.app/",
     sourceUrl: "https://github.com/bindujabavurupudi/FundForge-frontend",
     stack: ["React.js", "TypeScript", "Tailwind CSS", "ShadCN", "Node.js", "Express.js", "Supabase", "Firebase Auth"],
-  },
-  {
-    title: "E-Commerce Platform",
-    desc: "Full stack e-commerce app with cart, payments, and user authentication.",
-    stack: ["React", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Task Manager App",
-    desc: "Collaborative task management tool with drag-and-drop, real-time updates.",
-    stack: ["React", "Firebase", "CSS"],
-  },
-  {
-    title: "Weather Dashboard",
-    desc: "Live weather data visualization with charts, forecasts, and location search.",
-    stack: ["JavaScript", "API", "Chart.js"],
   },
 ];
 
@@ -83,22 +89,26 @@ const ProjectsSection = () => (
               </div>
 
               <div className="flex gap-3">
-                <a
-                  href={"demoUrl" in project ? project.demoUrl : "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <ExternalLink size={14} /> Live Demo
-                </a>
-                <a
-                  href={"sourceUrl" in project ? project.sourceUrl : "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Github size={14} /> Source Code
-                </a>
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <ExternalLink size={14} /> Live Demo
+                  </a>
+                )}
+                {project.sourceUrl && (
+                  <a
+                    href={project.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Github size={14} /> Source Code
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>
