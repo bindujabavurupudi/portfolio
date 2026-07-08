@@ -19,9 +19,10 @@ const projects: Project[] = [
   },
   {
     title: "Visa Approval Classifier",
-    desc: "Built and deployed an XGBoost-based visa approval prediction system using Flask, Docker, and AWS, achieving 73% accuracy. Integrated a responsive frontend using HTML, CSS, and JavaScript for user interaction.",
-    sourceUrl: "https://github.com/bindujabavurupudi/visa-approval-prediction",
-    stack: ["HTML", "CSS", "JavaScript", "Flask", "Docker", "AWS", "XGBoost"],
+    desc: "Designed and implemented a full-stack visa approval prediction system using Flask and XGBoost, achieving 73% model accuracy. Integrated a responsive HTML/CSS/JavaScript frontend with REST APIs and deployed the application using Render and Vercel.",
+    demoUrl: "https://visa-ai-predictor.vercel.app",
+    sourceUrl: "https://github.com/bindujabavurupudi/VisaAI",
+    stack: ["HTML", "CSS", "JavaScript", "Flask", "Python", "XGBoost"],
   },
   {
     title: "FundForge",
